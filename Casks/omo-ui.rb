@@ -19,7 +19,7 @@ cask "omo-ui" do
 
   # The app is ad-hoc signed, so Gatekeeper refuses a quarantined copy.
   postflight_steps do
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/OmO UI.app"]
+    run "/usr/bin/xattr", args: ["-r", "-d", "com.apple.quarantine", "{{appdir}}/OmO UI.app"]
   end
 
   zap trash: [
