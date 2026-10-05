@@ -13,14 +13,13 @@ cask "omo-ui" do
   end
 
   depends_on arch: :arm64
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "OmO UI.app"
 
   # The app is ad-hoc signed, so Gatekeeper refuses a quarantined copy.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/OmO UI.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/OmO UI.app"]
   end
 
   zap trash: [
