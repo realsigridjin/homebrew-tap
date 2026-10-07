@@ -1,6 +1,6 @@
 cask "omo-ui" do
-  version "0.1.3"
-  sha256 "54e8cab77ae8fddb9dcb07e52db1f4b0b2c757e4f1a27e49ddb86de5e1e8eae0"
+  version "0.1.4"
+  sha256 "ea441b68c4dca8674152a382db8dc9b549ce7d45b9848ad2cbe63bccf4057f3d"
 
   url "https://github.com/realsigridjin/omo-ui-macosapp/releases/download/v#{version}/omo-ui-#{version}-arm64-mac.zip"
   name "OmO UI"
